@@ -17,7 +17,7 @@ export class Anchor extends TransformObject {
 	public anchorID: string;
 
 	constructor(xrAnchor: XRAnchor, uuid: string = null) {
-		super(xrAnchor.anchorSpace);
+		super(() => xrAnchor.anchorSpace);
 		this._xrAnchor = xrAnchor;
 		this.anchorID = uuid;
 	}

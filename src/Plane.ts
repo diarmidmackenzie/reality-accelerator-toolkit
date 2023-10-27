@@ -28,7 +28,7 @@ export class Plane extends TransformObject {
 	public boundingRectangleHeight: number;
 
 	public constructor(xrPlane: XRPlane) {
-		super(xrPlane.planeSpace);
+		super(() => xrPlane.planeSpace);
 		this._xrPlane = xrPlane;
 	}
 

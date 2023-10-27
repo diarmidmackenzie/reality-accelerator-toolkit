@@ -40,7 +40,7 @@ export class RMesh extends TransformObject {
 	public boundingRectangleHeight: number;
 
 	public constructor(xrMesh: XRMesh) {
-		super(xrMesh.meshSpace);
+		super(() => xrMesh.meshSpace);
 		this._xrMesh = xrMesh;
 	}
 
